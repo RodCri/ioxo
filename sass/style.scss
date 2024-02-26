@@ -1,0 +1,135 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  font-size: 1.8rem;
+  font-family: "Montserrat", sans-serif;
+}
+.nav{
+  width: 100%;
+  height: 60px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  --menu-mostrar: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  --opacidad-abrir: 1;
+  --puntero-abrir: unset;
+  --opacidad-cerrar: 0;
+  --puntero-cerrar: none;
+  &:has(:checked) {
+    --menu-mostrar: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  
+    --opacidad-abrir: 0;
+    --puntero-abrir: none;
+  
+    --opacidad-cerrar: 1;
+    --puntero-cerrar: unset;
+  }
+  
+  &__menu{
+    width: 100%;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    color: rgb(82, 84, 86);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;    
+    clip-path: var(--menu-mostrar);
+    transition: clip-path 0.5s;
+    .nav__item{
+      list-style: none;
+      font-size: 2.2rem;
+    }
+  }
+  .nav__icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    .nav__label {
+      z-index: 100;
+      transition: 0.4s opacity;
+      position: absolute;
+    }
+    .nav__icon {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;  
+    }
+    .nav__label--open {
+      opacity: var(--opacidad-abrir);
+      pointer-events: var(--puntero-abrir);
+    }
+    
+    .nav__label--close {
+      opacity: var(--opacidad-cerrar);
+      pointer-events: var(--puntero-cerrar);
+    }
+  }
+}
+input[type="checkbox"] {
+    display: none;
+}
+.hero{
+  width: 100%;
+  height: 635px;
+  background: url('../img/hero-background.jpg') no-repeat center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__info{
+    width: 90%;
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    .hero__slogan{
+      font-size: 1.8rem;
+      color: #00113E;
+      font-weight: 300
+    }
+    .hero__title{
+      font-size: 3.5rem;
+      line-height: 1.5;
+      text-align: center;
+      font-weight: 600;
+      color: #00113E;
+      margin-bottom: 7rem
+    }
+    .hero__cta{
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      @media(min-width:600px){
+        flex-direction: row;
+      }
+      .cta{
+        @include m.cta;
+      }
+      .cta-left{
+        background-color: #ADD6D2;
+      }
+    }
+  }
+}
