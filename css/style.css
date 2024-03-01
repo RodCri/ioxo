@@ -39,7 +39,7 @@ body {
 }
 .nav__menu {
   width: 100%;
-  height: 200px;
+  height: 400px;
   background-color: rgb(255, 255, 255);
   position: absolute;
   top: 60px;
@@ -57,6 +57,24 @@ body {
 .nav__menu .nav__item {
   list-style: none;
   font-size: 2.2rem;
+  cursor: pointer;
+  height: 50px;
+  transition: all 0.3s ease;
+}
+.nav__menu .nav__item:hover {
+  text-decoration: underline;
+  color: #ADD6D2;
+}
+.nav__menu .nav__item-touch {
+  background-color: #EAA4A4;
+  color: #F7F9FF;
+  border-radius: 3rem;
+  padding: 1rem 2rem;
+}
+.nav__menu .nav__item-touch:hover {
+  background-color: #ADD6D2;
+  text-decoration: none;
+  color: #F7F9FF;
 }
 .nav .nav__icons {
   display: flex;
@@ -136,6 +154,11 @@ input[type=checkbox] {
   font-size: 1.6rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+.hero__info .hero__cta .cta:hover {
+  color: #00113E;
+  background-color: #fff;
 }
 .hero__info .hero__cta .cta-left {
   background-color: #ADD6D2;
@@ -258,6 +281,34 @@ input[type=checkbox] {
 .content .projects__content .project__info .project__view {
   color: #9D9EA5;
   font-size: 1.2rem;
+}
+.content .opinion {
+  background-color: #F7F9FF;
+  padding: 100px 0;
+  text-align: center;
+}
+.content .opinion__title {
+  font-size: 4rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+.content .opinion__info {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #9D9EA5;
+  margin-bottom: 7rem;
+}
+.content .opinion__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.content .opinion__cards .opinion__card {
+  width: 100%;
+  max-width: 330px;
+  background-color: #fff;
+  padding: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
