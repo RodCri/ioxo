@@ -308,7 +308,90 @@ input[type=checkbox] {
   width: 100%;
   max-width: 330px;
   background-color: #fff;
-  padding: 1rem;
+  padding: 3rem;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+.content .opinion__cards .opinion__card .opinion__user {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.content .opinion__cards .opinion__card .opinion__user .opinion__userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+.content .opinion__cards .opinion__card .opinion__user .opinion__userInfo .opinion__name {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #00113E;
+}
+.content .opinion__cards .opinion__card .opinion__user .opinion__userInfo .opinion__post {
+  color: #646569;
+  font-size: 1.6rem;
+}
+.content .opinion__cards .opinion__card .opinion__comment {
+  font-size: 1.6rem;
+  color: #9D9EA5;
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: left;
+}
+.content .opinion__cards .opinion__card:hover {
+  box-shadow: 0 30px 45px 0 rgba(0, 0, 0, 0.05);
+}
+.content .opinion__cards .active {
+  background-color: rgb(237, 237, 237);
+  transform: scale3d(1.05, 1.05, 1.05);
+  box-shadow: 0 30px 45px 0 rgba(0, 17, 62, 0.8);
+}
+.content .work {
+  background: url("../img/cta-background.jpg") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  padding: 10rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.content .work__title {
+  width: 100%;
+  max-width: 690px;
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 5px;
+  color: #00113E;
+}
+.content .work__btns {
+  display: flex;
+  gap: 2rem;
+}
+.content .work__btns .work__btn {
+  padding: 17px 40px;
+  background-color: #EAA4A4;
+  color: #fff;
+  border: none;
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+.content .work__btns .work__btn:hover {
+  color: #00113E;
+  background-color: #fff;
+}
+.content .work__btns .work__btn:hover {
+  border: 1px solid #00113E;
+}
+.content .work__btns .work__btn-N {
+  background-color: #ADD6D2;
 }
 
 /*# sourceMappingURL=style.css.map */
